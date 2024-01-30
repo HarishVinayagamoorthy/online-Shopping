@@ -1,5 +1,3 @@
-
-
 import React, { Fragment, useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
 import Spinner from '../components/Spinner'; // Import the Spinner component
@@ -8,7 +6,7 @@ import { useSearchParams } from 'react-router-dom';
 export default function Home() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams(); // Removed the unused variable
 
     useEffect(() => {
         setLoading(true);
@@ -38,4 +36,3 @@ export default function Home() {
         </Fragment>
     );
 }
-
